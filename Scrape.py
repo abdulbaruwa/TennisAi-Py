@@ -74,7 +74,14 @@ class LtaTennisTournamentScraper(object):
             header = rows[i].th.text.strip().replace(':','')
             header = 'tournament_' + header.replace(' ', '_').lower()
             json_data_to_append_to[header] = value
-            
+
+
+        json_data_to_append_to['tournament_address'] = body.body.findAll('address')[0].text.strip()
+        venue = body.body.findAll('a', {
+            'id': 'ctl00_ctl00_MainContentPlaceHolder_MainContentPlaceHolder_PlaceToPlay_hyperLinkVenueHeading'})
+
+        json_data_to_append_to['tournament_venue'] = venue[0].text.replace('Venue: ','')
+
         return json_data_to_append_to
 
     def get_tournament_details(self, page_source):

@@ -1,109 +1,109 @@
-[INFO  - 2017-10-11T20:56:02.689Z] GhostDriver - Main - running on port 33145
-[INFO  - 2017-10-11T20:56:03.648Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2017-10-11T20:56:03.648Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.customHeaders:  - {}
-[INFO  - 2017-10-11T20:56:03.648Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2017-10-11T20:56:03.648Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 981685e0-aec6-11e7-9a2b-d1a69357079a
-[ERROR - 2017-10-11T20:56:04.289Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+[INFO  - 2017-10-11T22:00:37.044Z] GhostDriver - Main - running on port 54295
+[INFO  - 2017-10-11T22:00:38.006Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-10-11T22:00:38.006Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.customHeaders:  - {}
+[INFO  - 2017-10-11T22:00:38.006Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-10-11T22:00:38.006Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9d62a340-aecf-11e7-95b4-713940561547
+[ERROR - 2017-10-11T22:00:38.599Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:56:04.289Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
+[ERROR - 2017-10-11T22:00:38.599Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
   global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=0:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:56:51.790Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+[ERROR - 2017-10-11T22:01:25.913Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: You have exceeded your daily request quota for this API. To request more than 25,000 map loads per day, you must use an API key and enable billing: https://developers.google.com/maps/documentation/javascript/get-api-key
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:56:51.790Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
+[ERROR - 2017-10-11T22:01:25.913Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
+  Ub (https://maps.google.com/maps/api/js?sensor=false:40)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-10-11T22:01:34.695Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: You have exceeded your daily request quota for this API. To request more than 25,000 map loads per day, you must use an API key and enable billing: https://developers.google.com/maps/documentation/javascript/get-api-key
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-10-11T22:01:34.695Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
+  Ub (https://maps.google.com/maps/api/js?sensor=false:40)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-10-11T22:01:42.348Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-10-11T22:01:42.348Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
   global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=1:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:57:34.572Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+[ERROR - 2017-10-11T22:02:28.623Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:57:34.572Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
+[ERROR - 2017-10-11T22:02:28.623Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
   global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=2:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:58:25.838Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+[ERROR - 2017-10-11T22:03:13.937Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:58:25.838Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
+[ERROR - 2017-10-11T22:03:13.937Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
   global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=3:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:59:11.473Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+[ERROR - 2017-10-11T22:04:01.106Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:59:11.473Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
+[ERROR - 2017-10-11T22:04:01.106Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
   global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=4:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:59:56.462Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: You have exceeded your daily request quota for this API. To request more than 25,000 map loads per day, you must use an API key and enable billing: https://developers.google.com/maps/documentation/javascript/get-api-key
+[ERROR - 2017-10-11T22:04:44.739Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T20:59:56.462Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
-  Ub (https://maps.google.com/maps/api/js?sensor=false:40)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:00:02.315Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:00:02.315Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
+[ERROR - 2017-10-11T22:04:44.739Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
   global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=5:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:00:49.486Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+[ERROR - 2017-10-11T22:05:29.356Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:00:49.486Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
+[ERROR - 2017-10-11T22:05:29.356Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
   global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=6:88)
 
   phantomjs://platform/console++.js:263 in error
-[INFO  - 2017-10-11T21:01:02.689Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[ERROR - 2017-10-11T21:01:10.603Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: You have exceeded your daily request quota for this API. To request more than 25,000 map loads per day, you must use an API key and enable billing: https://developers.google.com/maps/documentation/javascript/get-api-key
+[INFO  - 2017-10-11T22:05:37.044Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2017-10-11T22:05:58.911Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:10.603Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
-  Ub (https://maps.google.com/maps/api/js?sensor=false:40)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:26.751Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:26.751Z] Session [981685e0-aec6-11e7-9a2b-d1a69357079a] - page.onError - stack:
+[ERROR - 2017-10-11T22:05:58.911Z] Session [9d62a340-aecf-11e7-95b4-713940561547] - page.onError - stack:
   global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=7:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:27.358Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755687335
+[ERROR - 2017-10-11T22:05:59.768Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759559738
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:28.322Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755688301
+[ERROR - 2017-10-11T22:06:00.730Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759560709
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:29.267Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755689247
+[ERROR - 2017-10-11T22:06:01.685Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759561664
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:30.215Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755690200
+[ERROR - 2017-10-11T22:06:02.635Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759562614
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:31.131Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755691109
+[ERROR - 2017-10-11T22:06:03.586Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759563564
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:32.085Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755692065
+[ERROR - 2017-10-11T22:06:04.535Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759564514
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:32.994Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755692977
+[ERROR - 2017-10-11T22:06:05.445Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759565428
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:33.909Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755693891
+[ERROR - 2017-10-11T22:06:06.360Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759566340
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:34.852Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755694835
+[ERROR - 2017-10-11T22:06:07.271Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759567253
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:35.804Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755695783
+[ERROR - 2017-10-11T22:06:08.185Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759568163
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-11T21:01:36.744Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507755696729
+[ERROR - 2017-10-11T22:06:09.135Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507759569113
 
   phantomjs://platform/console++.js:263 in error
