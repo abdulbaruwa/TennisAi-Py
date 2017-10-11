@@ -47,6 +47,7 @@ class LtaTennisTournamentScraper(object):
 
     def get_tournaments_json(self, tournament_section_div):
         data = {}
+        tournament_details_link = 'https://www3.lta.org.uk' + tournament_section_div.findAll('a', {'class':'titled'})[0]['href']
         data['tournament'] = tournament_section_div.a.text
         data['tournament_code'] = tournament_section_div.span.text
         tournament_location_div = tournament_section_div.findAll('div',{'class':'di'})[0].text
@@ -55,8 +56,8 @@ class LtaTennisTournamentScraper(object):
         data['tournament_gender'] = tournament_section_div.findAll('div', {'class':'dp'})[0].text
         data['tournament_grade'] = tournament_section_div.findAll('div', {'class':'d2'})[0].span.text
         data['tournament_rating'] = tournament_section_div.findAll('div', {'class':'d2'})[0].div.text
+        data['tournament_link'] = tournament_details_link
 
-        tournament_details_link = 'https://www3.lta.org.uk' + tournament_section_div.findAll('a', {'class':'titled'})[0]['href']
         # print(tournament_details_link)# + ' , ' + tournament + ',' + tournament_code + ',' + tournament_type #  + ',' + tournament_date + ',' + tournament_gender + ',' + tournament_grade + ',' + tournament_rating)
 
         return tournament_details_link, data        
@@ -71,6 +72,7 @@ class LtaTennisTournamentScraper(object):
         for i in range(1,11):
             value = rows[i].td.text.strip()
             header = rows[i].th.text.strip().replace(':','')
+            header = 'tournament_' + header.replace(' ', '_').lower()
             json_data_to_append_to[header] = value
             
         return json_data_to_append_to
