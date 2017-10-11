@@ -91,6 +91,29 @@ class LtaTennisTournamentScraper(object):
                 csv_line += '\n'
         return csv_line
 
+    def get_tournament_players_json(self, page_source):
+        body = soup(page_source, 'html.parser')
+        entrants_container = body.body.findAll('div', {
+            'id': 'ctl00_ctl00_MainContentPlaceHolder_MainContentPlaceHolder_EventEntrants_EntrantsRecieved_lvEntrants_pnlEntrants'})
+        if len(entrants_container) == 0:
+            print('No entrants found for the policy')
+            return []
+        # print(entrants_container[0].table.tbody.findAll('tr'))
+        rows = entrants_container[0].table.tbody.findAll('tr')
+        players = []
+        for i in range(len(rows)):
+            data = {}
+            tds = rows[i].findAll('td')
+            data['player_name'] = tds[1].a.text
+            data['player_link'] = tds[1].a['href']
+            data['player_rating'] = tds[3].text
+            data['player_county'] = tds[4].text
+            players.append(data)
+        # entrants_data = {}
+        # entrants_data['entrants'] = players
+#         json_data = json.dumps(entrants_data)
+        return players
+
     def get_url_body(self, url, driver, func):
         wait = WebDriverWait(driver, 10)
         driver.get(url)
@@ -147,7 +170,6 @@ class LtaTennisTournamentScraper(object):
 
     def scrape_to_json(self):
         f = open(self.filename_json, 'w')
-        f.write(self.header)
         page = 0
 
         def next_page(driver):
@@ -175,7 +197,7 @@ class LtaTennisTournamentScraper(object):
                 print(detail_link)
                 detail_response = self.get_url_body(detail_link, self.driver, self.match_details_loaded)
                 json_result  = self.get_tournament_details_json(detail_response, json_data)
-
+                json_result['entrants'] = self.get_tournament_players_json(detail_response)
                 # print(file_line)
                 tournaments.append(json_result)
             print('page ' + str(page) + ' done!')
