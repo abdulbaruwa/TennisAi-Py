@@ -1,6 +1,8 @@
 # pylint: disable=missing-docstring
 import time
 import json
+import importlib.util
+
 from bs4 import BeautifulSoup as soup
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
@@ -8,6 +10,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
+
+from Repository.scrapy_persist import AzureRepository as azure
+
+## import local modules
+# spec = importlib.util. spec_from_file_location('scrapy_persist', '/TennisAi/Repository/scrapy_persist.py')
+# repository = importlib.util.module_from_spec(spec)
+# spec.loader.exec_module(repository)
+
 
 """
 Init the function
@@ -22,6 +32,9 @@ class LtaTennisTournamentScraper(object):
         self.header = header + ', Grade , Rating guide , Payment info , Timings info , Provisional Draw Size , Open for entries , Closed for entries , Withdrawal deadline , Start date , End date:\n'
         self.driver = webdriver.PhantomJS()
         self.driver.set_window_size(1120, 550)
+        self.repository = azure()
+        print(azure.read_config())
+
 
 
     def replace_coma(self, value):
@@ -207,8 +220,11 @@ class LtaTennisTournamentScraper(object):
                 detail_response = self.get_url_body(detail_link, self.driver, self.match_details_loaded)
                 json_result  = self.get_tournament_details_json(detail_response, json_data)
                 json_result['entrants'] = self.get_tournament_players_json(detail_response)
-                # print(file_line)
+                print(json.dumps(json_result))
                 tournaments.append(json_result)
+                print(type(json_result))
+                self.repository.write_to_collection('tournaments', json_result)
+
             print('page ' + str(page) + ' done!')
 
         root_json_output = {}
