@@ -2,6 +2,7 @@ import json
 import pydocumentdb.documents as documents
 import pydocumentdb.document_client as document_client
 import pydocumentdb.errors as errors
+import datetime
 
 class IDisposable:
     """ A context manager to automatically close an object with a close method
@@ -54,5 +55,10 @@ class AzureRepository(object):
             return []
 
     def write_to_collection(self, collection_id, json_document):
+        id = json_document['id']
         print('Writing document to Azure')
-        self.client.CreateDocument(self.get_document_collection_link(collection_id), json_document)
+        current_hash = self.client.QueryDocuments(self.get_document_collection_link(collection_id), 'SELECT t.hash  FROM tournaments t where t.id = ' + id)
+        if current_hash != json_document['hash']:
+            json_document['update_date'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            self.client.UpsertDocument(self.get_document_collection_link(collection_id), json_document)
+

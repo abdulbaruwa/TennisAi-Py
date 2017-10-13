@@ -1,4 +1,5 @@
 # pylint: disable=missing-docstring
+import hashlib
 import time
 import json
 import importlib.util
@@ -62,7 +63,7 @@ class LtaTennisTournamentScraper(object):
         data = {}
         tournament_details_link = 'https://www3.lta.org.uk' + tournament_section_div.findAll('a', {'class':'titled'})[0]['href']
         data['tournament'] = tournament_section_div.a.text
-        data['tournament_code'] = tournament_section_div.span.text
+        data['id'] = tournament_section_div.span.text
         tournament_location_div = tournament_section_div.findAll('div',{'class':'di'})[0].text
         data['tournament_type'] = tournament_section_div.findAll('div', {'class':'dk'})[0].text
         data['tournament_date'] = tournament_section_div.findAll('div', {'class':'dl'})[0].text
@@ -190,6 +191,11 @@ class LtaTennisTournamentScraper(object):
         f.close()
         self.driver.quit()
 
+    def md5_checksum(self, data):
+        m = hashlib.md5()
+        m.update(repr(data).encode('utf-8'))
+        return m.hexdigest()
+
     def scrape_to_json(self):
         f = open(self.filename_json, 'w')
         page = 0
@@ -220,9 +226,10 @@ class LtaTennisTournamentScraper(object):
                 detail_response = self.get_url_body(detail_link, self.driver, self.match_details_loaded)
                 json_result  = self.get_tournament_details_json(detail_response, json_data)
                 json_result['entrants'] = self.get_tournament_players_json(detail_response)
-                print(json.dumps(json_result))
+                json_result['hash'] = self.md5_checksum(json_result)
+                # print(json.dumps(json_result))
                 tournaments.append(json_result)
-                print(type(json_result))
+                # print(json_result['id'])
                 self.repository.write_to_collection('tournaments', json_result)
 
             print('page ' + str(page) + ' done!')
@@ -233,6 +240,7 @@ class LtaTennisTournamentScraper(object):
         f.write(json.dumps(root_json_output))
         f.close()
         self.driver.quit()
+
 if __name__ == '__main__':
     lta_scraper = LtaTennisTournamentScraper()
     lta_scraper.scrape_to_json()
