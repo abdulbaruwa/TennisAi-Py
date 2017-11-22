@@ -1,109 +1,22 @@
-[INFO  - 2017-10-13T21:06:51.502Z] GhostDriver - Main - running on port 35163
-[INFO  - 2017-10-13T21:06:52.460Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2017-10-13T21:06:52.460Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.customHeaders:  - {}
-[INFO  - 2017-10-13T21:06:52.460Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2017-10-13T21:06:52.460Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 6fa2e0a0-b05a-11e7-badd-ef08ff58875b
-[ERROR - 2017-10-13T21:06:53.028Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+[INFO  - 2017-10-29T08:25:19.480Z] GhostDriver - Main - running on port 47924
+[INFO  - 2017-10-29T08:25:20.436Z] Session [b3ad5120-bc82-11e7-96de-1150a5b8eadc] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-10-29T08:25:20.436Z] Session [b3ad5120-bc82-11e7-96de-1150a5b8eadc] - page.customHeaders:  - {}
+[INFO  - 2017-10-29T08:25:20.436Z] Session [b3ad5120-bc82-11e7-96de-1150a5b8eadc] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-10-29T08:25:20.436Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b3ad5120-bc82-11e7-96de-1150a5b8eadc
+[ERROR - 2017-10-29T08:25:20.993Z] Session [b3ad5120-bc82-11e7-96de-1150a5b8eadc] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:06:53.028Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - stack:
-  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=0:88)
+[ERROR - 2017-10-29T08:25:20.993Z] Session [b3ad5120-bc82-11e7-96de-1150a5b8eadc] - page.onError - stack:
+  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&grade=/1/2/3/4/5&age=/0&status=/5/4&event=/0&gdr=/00:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:07:43.722Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
+[ERROR - 2017-10-29T08:26:23.983Z] Session [b3ad5120-bc82-11e7-96de-1150a5b8eadc] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:07:43.722Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - stack:
-  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=1:88)
+[ERROR - 2017-10-29T08:26:23.983Z] Session [b3ad5120-bc82-11e7-96de-1150a5b8eadc] - page.onError - stack:
+  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&grade=/1/2/3/4/5&age=/0&status=/5/4&event=/0&gdr=/01:88)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:08:23.451Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:08:23.451Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - stack:
-  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=2:88)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:08:24.016Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507928903998
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:09:15.683Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:09:15.684Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - stack:
-  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=3:88)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:09:16.228Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507928956204
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:09:57.029Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:09:57.029Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - stack:
-  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=4:88)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:09:57.661Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507928997642
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:10:36.726Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:10:36.726Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - stack:
-  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=5:88)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:10:37.346Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929037339
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:21.625Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:21.625Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - stack:
-  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=6:88)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:22.192Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929082173
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:34.969Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'currUrl[1].indexOf')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:34.969Z] Session [6fa2e0a0-b05a-11e7-badd-ef08ff58875b] - page.onError - stack:
-  global code (https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page=7:88)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:35.603Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929095593
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:36.524Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929096511
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:37.462Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929097444
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:38.398Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929098385
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:39.311Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929099299
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:40.244Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929100225
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:41.187Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929101170
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:42.125Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929102107
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:43.084Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929103063
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:44.018Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929103998
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-10-13T21:11:44.964Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1507929104944
+[ERROR - 2017-10-29T08:26:24.492Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1509265584477
 
   phantomjs://platform/console++.js:263 in error

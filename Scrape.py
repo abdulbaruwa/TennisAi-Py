@@ -28,7 +28,9 @@ class LtaTennisTournamentScraper(object):
     def __init__(self):
         self.filename = '/home/datadrive/lta_dump/tournaments_main.csv'
         self.filename_json = '/home/datadrive/lta_dump/tournaments_main.json'
-        self.lta_base_url = 'https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page='
+        #self.lta_base_url = 'https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&status=/4/5&grade=/1/2/3&page='
+        self.lta_base_url = 'https://www3.lta.org.uk/Competitions/Search/Search/#/?gen=/3&grade=/1/2/3/4/5&age=/0&status=/5/4&event=/0&gdr=/0'
+
         header = 'tournament_details_link' + ' , ' + 'tournament' + ',' + 'tournament_code' + ',' + 'tournament_type ' + ',' + 'tournament_date' + ',' + 'tournament_gender' + ',' + 'tournament_grade' + ',' + 'tournament_rating'
         self.header = header + ', Grade , Rating guide , Payment info , Timings info , Provisional Draw Size , Open for entries , Closed for entries , Withdrawal deadline , Start date , End date:\n'
         self.driver = webdriver.PhantomJS()
@@ -71,6 +73,7 @@ class LtaTennisTournamentScraper(object):
         data['tournament_grade'] = tournament_section_div.findAll('div', {'class':'d2'})[0].span.text
         data['tournament_rating'] = tournament_section_div.findAll('div', {'class':'d2'})[0].div.text
         data['tournament_link'] = tournament_details_link
+        EC.element_to_be_clickable
 
         # print(tournament_details_link)# + ' , ' + tournament + ',' + tournament_code + ',' + tournament_type #  + ',' + tournament_date + ',' + tournament_gender + ',' + tournament_grade + ',' + tournament_rating)
 
@@ -115,14 +118,18 @@ class LtaTennisTournamentScraper(object):
         return csv_line
 
     def get_tournament_players_json(self, page_source):
+        rows = []
         body = soup(page_source, 'html.parser')
-        entrants_container = body.body.findAll('div', {
-            'id': 'ctl00_ctl00_MainContentPlaceHolder_MainContentPlaceHolder_EventEntrants_EntrantsRecieved_lvEntrants_pnlEntrants'})
-        if len(entrants_container) == 0:
+        entrants_recieved = body.body.findAll('div', {'id': 'ctl00_ctl00_MainContentPlaceHolder_MainContentPlaceHolder_EventEntrants_EntrantsRecieved_lvEntrants_pnlEntrants'})
+        entrants_maindraw = body.body.findAll('div', {'id': 'ctl00_ctl00_MainContentPlaceHolder_MainContentPlaceHolder_EventEntrants_EntrantsMainDraw_lvEntrants_pnlEntrants'})
+        if len(entrants_recieved) > 0:
+            rows = entrants_recieved[0].table.tbody.findAll('tr')
+        elif len(entrants_maindraw) > 0:
+            rows = entrants_maindraw[0].table.tbody.findAll('tr')
+        else:
             print('No entrants found for the policy')
             return []
-        # print(entrants_container[0].table.tbody.findAll('tr'))
-        rows = entrants_container[0].table.tbody.findAll('tr')
+
         players = []
         for i in range(len(rows)):
             data = {}
@@ -190,6 +197,7 @@ class LtaTennisTournamentScraper(object):
             print('page ' + str(page) + ' done!')
         f.close()
         self.driver.quit()
+
 
     def md5_checksum(self, data):
         m = hashlib.md5()

@@ -18,7 +18,6 @@ class IDisposable:
         # extra cleanup in here
         self = None
 
-
 class AzureRepository(object):
 
     def __init__(self):
@@ -29,7 +28,7 @@ class AzureRepository(object):
 
     @staticmethod
     def read_config():
-        with open('/home/datadrive/azure_secrets/tennisai.config') as f:
+        with open('/home/datadrive/azure_secrets/tennisai2.config') as f:
             config = json.load(f)
         return config
 
